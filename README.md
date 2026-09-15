@@ -28,6 +28,8 @@ cmake --build build
 ## TODO
 
 - [ ] полный 2Q
+	- [x] алгоритм 2Q
+	- [ ] тестирование 2Q
 - [ ] ARC
 - [ ] LFU
 - [ ] LIRS
