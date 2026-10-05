@@ -6,14 +6,14 @@
 #include <utility>
 
 template <typename T, typename KeyT = int>
-struct cache_t {
+class cache_t {
   std::size_t sz_;
   using Entry = std::pair<KeyT, T>;
   std::list<Entry> cache_;
 
   using ListIt = typename std::list<Entry>::iterator;
   std::unordered_map<KeyT, ListIt> hash_;
-
+public:
   cache_t(std::size_t sz) : sz_(sz) {};
 
   bool full() const { return cache_.size() >= sz_; }

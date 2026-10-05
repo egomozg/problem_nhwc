@@ -1,4 +1,4 @@
-#include "simplified_2q.hpp"
+#include "2q.hpp"
 
 #include <catch2/catch_test_macros.hpp>
 #include <string>

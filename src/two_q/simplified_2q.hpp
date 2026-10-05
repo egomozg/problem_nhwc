@@ -5,8 +5,7 @@
 #include <unordered_map>
 #include <utility>
 
-template <typename T, typename KeyT = int> struct cache_t {
-private:
+template <typename T, typename KeyT = int> class cache_t {
   std::size_t sz_;
   std::size_t a1_threshold_;
   using Entry = std::pair<KeyT, T>;

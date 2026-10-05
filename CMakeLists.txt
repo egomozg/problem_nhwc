@@ -25,3 +25,4 @@ endif()
 
 add_subdirectory(src/lru)
 add_subdirectory(src/two_q)
+add_subdirectory(src/lfu)

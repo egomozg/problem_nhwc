@@ -3,12 +3,10 @@
 #include <algorithm>
 #include <cstddef>
 #include <list>
-#include <stdexcept>
 #include <unordered_map>
 #include <utility>
 
-template <typename T, typename KeyT = int> struct cache_t {
-private:
+template <typename T, typename KeyT = int> class cache_t {
   std::size_t sz_;
   std::size_t Kin_;
   std::size_t Kout_;
@@ -23,7 +21,6 @@ private:
   std::unordered_map<KeyT, GhostIt> a1_out_hash_;
 
   // i think we should test this method exclusively
-  // TODO: how to test private method...
   void reclaim() {
     if (!full())
       return;
