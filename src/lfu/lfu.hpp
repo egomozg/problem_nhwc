@@ -17,8 +17,8 @@ class cache_t {
     };
     std::list<FreqBucket> freq_;
 
-    using FreqIt = std::list<FreqBucket>::iterator;
-    using ListIt = std::list<Entry>::iterator;
+    using FreqIt = typename std::list<FreqBucket>::iterator;
+    using ListIt = typename std::list<Entry>::iterator;
     struct Position {
         FreqIt bucket;
         ListIt entry;
