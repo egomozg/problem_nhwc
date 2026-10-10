@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <cassert>
 #include <cstddef>
 #include <list>
 #include <unordered_map>
@@ -44,6 +45,7 @@ class cache_t {
 			record.q_pos = q_.begin();
 			record.in_q = true;
 		}
+		assert(data_.find(key) != data_.end());
 	}
 
 	void prune_s() {
